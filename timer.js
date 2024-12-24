@@ -1,11 +1,25 @@
+// timer.js
+
 // Check if the timer bar already exists to prevent duplicates
 if (!document.getElementById("timer-bar")) {
+  // Create the timer bar container
   const timerBar = document.createElement("div");
   timerBar.id = "timer-bar";
 
-  // Add the HTML structure for the timer
+  // Add the HTML structure for the timer bar
   timerBar.innerHTML = `
-    <div style="display: flex; align-items: center; padding: 10px; background-color: #f0f0f0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;">
+    <div style="
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: #f0f0f0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+    ">
       <input type="number" id="hours-input" placeholder="Hours" style="width: 70px; margin-right: 5px;" min="0">
       <input type="number" id="minutes-input" placeholder="Minutes" style="width: 70px; margin-right: 5px;" min="0">
       <input type="number" id="seconds-input" placeholder="Seconds" style="width: 70px; margin-right: 5px;" min="0">
@@ -16,19 +30,22 @@ if (!document.getElementById("timer-bar")) {
     </div>
   `;
 
+  // Append the timer bar to the top of the page
   document.body.appendChild(timerBar);
 
+  // Timer variables
   let timerInterval;
   let isPaused = false;
   let remainingTime = 0;
 
-  // Timer logic here (same as before)
+  // Event listener for the Start button
   document.getElementById("start-timer").addEventListener("click", () => {
     const hoursInput = document.getElementById("hours-input").value || 0;
     const minutesInput = document.getElementById("minutes-input").value || 0;
     const secondsInput = document.getElementById("seconds-input").value || 0;
     const timerDisplay = document.getElementById("timer-display");
 
+    // Disable inputs and enable pause/stop buttons
     document.getElementById("start-timer").disabled = true;
     document.getElementById("pause-timer").disabled = false;
     document.getElementById("stop-timer").disabled = false;
@@ -47,6 +64,7 @@ if (!document.getElementById("timer-bar")) {
     startCountdown(totalTimeInSeconds, timerDisplay);
   });
 
+  // Event listener for the Pause button
   document.getElementById("pause-timer").addEventListener("click", () => {
     if (timerInterval) {
       clearInterval(timerInterval);
@@ -56,6 +74,7 @@ if (!document.getElementById("timer-bar")) {
     }
   });
 
+  // Event listener for the Stop button
   document.getElementById("stop-timer").addEventListener("click", () => {
     clearInterval(timerInterval);
     isPaused = false;
@@ -71,6 +90,7 @@ if (!document.getElementById("timer-bar")) {
     document.getElementById("stop-timer").disabled = true;
   });
 
+  // Function to handle countdown logic
   function startCountdown(totalTimeInSeconds, timerDisplay) {
     timerInterval = setInterval(() => {
       if (totalTimeInSeconds <= 0) {

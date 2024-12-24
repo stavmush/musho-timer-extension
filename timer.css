@@ -1,23 +1,31 @@
+/* timer.css */
+
+/* Styles for the timer bar container */
 #timer-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-  }
-  
-  #hours-input, #minutes-input, #seconds-input {
-    width: 80px;
-    margin: 5px;
-  }
-  
-  #start-timer, #pause-timer, #stop-timer {
-    margin: 5px;
-  }
-  
-  #timer-display {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  
+    position: fixed; /* Ensures the timer stays at the top of the page */
+    top: 0;
+    left: 0;
+    width: 100%; /* Makes the bar span the full width of the page */
+    background-color: #f0f0f0; /* Light gray background for better visibility */
+    display: flex; /* Aligns child elements horizontally */
+    justify-content: space-between; /* Distributes space between elements */
+    align-items: center; /* Vertically centers elements */
+    padding: 10px; /* Adds spacing inside the container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+/* Styles for the input fields */
+#hours-input, #minutes-input, #seconds-input {
+    width: 70px; /* Sets a consistent width for all input fields */
+    margin-right: 5px; /* Adds spacing between inputs */
+}
+
+/* Styles for the control buttons */
+#start-timer, #pause-timer, #stop-timer {
+    margin-right: 10px; /* Adds spacing between buttons */
+}
+
+/* Styles for the timer display */
+#timer-display {
+    font-weight: bold; /* Makes the display text stand out */
+}
