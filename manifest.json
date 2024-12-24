@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Timer Bar",
+    "version": "1.0",
+    "description": "A simple adjustable timer bar at the top of the page.",
+    "action": {
+      "default_popup": "timer.html"
+    }
+  }
+  
