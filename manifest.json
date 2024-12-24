@@ -1,10 +1,14 @@
 {
     "manifest_version": 3,
     "name": "Timer Bar",
-    "version": "1.0",
-    "description": "A simple adjustable timer bar at the top of the page.",
+    "version": "1.2",
+    "description": "A timer bar injected into the top of the current webpage.",
+    "permissions": ["scripting", "activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
     "action": {
-      "default_popup": "timer.html"
+      "default_title": "Timer Bar"
     }
   }
   
