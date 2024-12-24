@@ -8,9 +8,13 @@
 </head>
 <body>
   <div id="timer-bar">
-    <input type="number" id="timer-input" placeholder="Set Timer (minutes)" />
+    <input type="number" id="hours-input" placeholder="Hours" min="0" />
+    <input type="number" id="minutes-input" placeholder="Minutes" min="0" />
+    <input type="number" id="seconds-input" placeholder="Seconds" min="0" />
     <button id="start-timer">Start</button>
-    <span id="timer-display">00:00</span>
+    <button id="pause-timer" disabled>Pause</button>
+    <button id="stop-timer" disabled>Stop</button>
+    <span id="timer-display">00:00:00</span>
   </div>
   <script src="timer.js"></script>
 </body>
