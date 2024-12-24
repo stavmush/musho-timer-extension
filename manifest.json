@@ -9,6 +9,12 @@
     },
     "action": {
       "default_title": "Timer Bar"
-    }
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["timer.css"],
+        "matches": ["<all_urls>"]
+      }
+    ]
   }
   

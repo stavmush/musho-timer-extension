@@ -19,3 +19,5 @@ chrome.action.onClicked.addListener((tab) => {
       console.error("No active tab found.");
     }
   });
+
+  

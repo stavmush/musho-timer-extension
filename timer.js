@@ -8,25 +8,14 @@ if (!document.getElementById("timer-bar")) {
 
   // Add the HTML structure for the timer bar
   timerBar.innerHTML = `
-    <div style="
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      background-color: #f0f0f0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 9999;
-    ">
-      <input type="number" id="hours-input" placeholder="Hours" style="width: 70px; margin-right: 5px;" min="0">
-      <input type="number" id="minutes-input" placeholder="Minutes" style="width: 70px; margin-right: 5px;" min="0">
-      <input type="number" id="seconds-input" placeholder="Seconds" style="width: 70px; margin-right: 5px;" min="0">
-      <button id="start-timer" style="margin-right: 10px;">Start</button>
-      <button id="pause-timer" style="margin-right: 10px;" disabled>Pause</button>
+    <div>
+      <input type="number" id="hours-input" placeholder="Hours" min="0">
+      <input type="number" id="minutes-input" placeholder="Minutes" min="0">
+      <input type="number" id="seconds-input" placeholder="Seconds" min="0">
+      <button id="start-timer">Start</button>
+      <button id="pause-timer" disabled>Pause</button>
       <button id="stop-timer" disabled>Stop</button>
-      <span id="timer-display" style="margin-left: auto; font-weight: bold;">00:00:00</span>
+      <span id="timer-display">00:00:00</span>
     </div>
   `;
 

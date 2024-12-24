@@ -6,9 +6,9 @@
     top: 0;
     left: 0;
     width: 100%; /* Makes the bar span the full width of the page */
-    background-color: #f0f0f0; /* Light gray background for better visibility */
+    background-color: #e0e0e0; /* Updated background color for better contrast */
     display: flex; /* Aligns child elements horizontally */
-    justify-content: space-between; /* Distributes space between elements */
+    justify-content: center; /* Centers elements across the bar */
     align-items: center; /* Vertically centers elements */
     padding: 10px; /* Adds spacing inside the container */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
@@ -17,15 +17,19 @@
 /* Styles for the input fields */
 #hours-input, #minutes-input, #seconds-input {
     width: 70px; /* Sets a consistent width for all input fields */
-    margin-right: 5px; /* Adds spacing between inputs */
+    margin: 0 10px; /* Adds spacing between inputs */
 }
 
 /* Styles for the control buttons */
 #start-timer, #pause-timer, #stop-timer {
-    margin-right: 10px; /* Adds spacing between buttons */
+    margin: 0 10px; /* Adds spacing between buttons */
 }
 
 /* Styles for the timer display */
 #timer-display {
     font-weight: bold; /* Makes the display text stand out */
+    font-size: 30px; /* Increases font size for better visibility */
+    color: #000; /* Ensures the text is visible */
+    margin: 0 auto; /* Ensures the display is centered within its container */
+    text-align: center; /* Aligns text to the center */
 }
