@@ -1,26 +1,23 @@
 #timer-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f0f0f0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   #hours-input, #minutes-input, #seconds-input {
-    width: 70px;
-    margin-right: 5px;
+    width: 80px;
+    margin: 5px;
   }
   
   #start-timer, #pause-timer, #stop-timer {
-    margin-right: 10px;
+    margin: 5px;
   }
   
   #timer-display {
+    margin-top: 10px;
     font-weight: bold;
+    font-size: 16px;
   }
   
